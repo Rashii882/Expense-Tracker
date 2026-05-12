@@ -4,7 +4,7 @@ const ExpenseTable = ({ expenses, deleteExpens }) => {
 
     return (
         <div className="expense-list">
-            {expenses.map((expense, index) => (
+            {expenses?.map((expense, index) => (
                 <div key={index} className="expense-item">
                     <button className="delete-button" onClick={() =>
                         deleteExpens(expense._id)}>X</button>

@@ -54,7 +54,7 @@ function Home() {
             const result = await response.json();
             handleSuccess(result?.message)
             console.log('--result', result.data);
-            setExpenses(result.data);
+            setExpenses(result.data || []);;
         } catch (err) {
             handleError(err);
         }
@@ -76,7 +76,7 @@ function Home() {
             }
             const result = await response.json();
             console.log('--result', result.data);
-            setExpenses(result.data);
+           setExpenses(result.data || []);;
         } catch (err) {
             handleError(err);
         }
@@ -104,7 +104,7 @@ function Home() {
             const result = await response.json();
             handleSuccess(result?.message)
             console.log('--result', result.data);
-            setExpenses(result.data);
+           setExpenses(result.data || []);;
         } catch (err) {
             handleError(err);
         }
