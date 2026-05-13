@@ -26,15 +26,21 @@ function Home() {
             navigate('/login');
         }, 1000)
     }
-    useEffect(() => {
-        const amounts = expenses.map(item => item.amount);
-        const income = amounts.filter(item => item > 0)
-            .reduce((acc, item) => (acc += item), 0);
-        const exp = amounts.filter(item => item < 0)
-            .reduce((acc, item) => (acc += item), 0) * -1;
-        setIncomeAmt(income);
-        setExpenseAmt(exp);
-    }, [expenses])
+   useEffect(() => {
+    const amounts = expenses.map(item => Number(item.amount));
+
+    const income = amounts
+        .filter(item => item > 0)
+        .reduce((acc, item) => acc + item, 0);
+
+    const exp = amounts
+        .filter(item => item < 0)
+        .reduce((acc, item) => acc + item, 0) * -1;
+
+    setIncomeAmt(income);
+    setExpenseAmt(exp);
+
+}, [expenses])
 
     const deleteExpens = async (id) => {
         try {
