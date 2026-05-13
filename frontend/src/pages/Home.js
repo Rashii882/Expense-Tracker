@@ -116,7 +116,7 @@ function Home() {
         }
     }
 
-  useEffect(() => {
+ useEffect(() => {
   fetchExpenses();
 // eslint-disable-next-line react-hooks/exhaustive-deps
 }, []);
