@@ -12,4 +12,6 @@ export const handleError = (msg) => {
     })
 }
 
-export const APIUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+export const APIUrl =
+  process.env.REACT_APP_API_URL ||
+  "https://expense-tracker-nnub.onrender.com";

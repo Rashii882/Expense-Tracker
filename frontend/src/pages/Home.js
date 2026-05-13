@@ -116,10 +116,10 @@ function Home() {
         }
     }
 
-    useEffect(() => {
-        fetchExpenses()
-    }, [])
-
+  useEffect(() => {
+  fetchExpenses();
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
     return (
         <div>
             <div className='user-section'>
