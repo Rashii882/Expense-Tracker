@@ -69,19 +69,48 @@ body{
   margin-bottom: 20px;
 }
 
-.month-section h1{
-  font-size: 45px;
-  font-weight: 700;
+/* WELCOME SECTION */
+
+.welcome-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
 }
 
-.month-section button{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid #d8c9bc;
-  background: #f3e8dc;
-  cursor: pointer;
+.welcome-section h1{
+  font-size: 60px;
+  font-weight: 800;
+  color: #2f2f2f;
+}
+
+.logout-btn{
+  padding: 14px 28px;
+  border: none;
+  border-radius: 14px;
+  background: #ef4444;
+  color: white;
   font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover{
+  transform: translateY(-2px);
+  background: #dc2626;
+}
+
+@media(max-width:700px){
+
+  .welcome-section{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .welcome-section h1{
+    font-size: 40px;
+    text-align: center;
+  }
 }
 
 /* ADD BUTTON */
@@ -301,8 +330,13 @@ body{
   }
 
   .month-section h1{
-    font-size: 32px;
-  }
+  font-size: 60px;
+  font-weight: 800;
+  color: #2f2f2f;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
 
   .summary-card h1{
     font-size: 35px;
@@ -345,84 +379,268 @@ body{
     gap: 15px;
   }
 }
-/* AUTH PAGE */
 
-.auth-page{
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #e7d9cb;
-  padding: 20px;
-}
+/* MODERN FORM */
 
-.auth-card{
-  width: 100%;
-  max-width: 450px;
+.modern-form{
   background: #f3e7da;
   padding: 40px;
   border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
 }
 
-.auth-card h1{
+.form-header{
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+}
+
+.wallet-icon{
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+  background: #6bb6f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.form-header h1{
   font-size: 42px;
-  color: #2f2f2f;
-}
-
-.auth-card form div{
-  margin-bottom: 22px;
-}
-
-.auth-card label{
-  display: block;
   margin-bottom: 10px;
-  font-size: 17px;
+}
+
+.form-header p{
+  color: #666;
+  font-size: 18px;
+}
+
+.form-group{
+  margin-bottom: 25px;
+}
+
+.form-group label{
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
   font-weight: 600;
 }
 
-.auth-card input{
+.form-group input,
+.form-group select{
   width: 100%;
-  padding: 16px;
+  padding: 22px;
+  border-radius: 18px;
   border: none;
-  border-radius: 14px;
   background: white;
-  font-size: 16px;
+  font-size: 20px;
   outline: none;
 }
 
-.auth-card button{
+.empty-chart{
   width: 100%;
-  padding: 16px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-chart h2{
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.empty-chart p{
+  font-size: 18px;
+  color: #777;
+}
+
+.expense-btn{
+  width: 100%;
+  padding: 18px;
   border: none;
-  border-radius: 14px;
+  border-radius: 18px;
   background: #6bb6f0;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
-  margin-top: 10px;
   transition: 0.3s;
 }
 
-.auth-card button:hover{
+.expense-btn:hover{
   transform: translateY(-2px);
 }
 
-.auth-card span{
-  display: block;
-  margin-top: 20px;
-  text-align: center;
-  color: #555;
+/* MODERN TABLE */
+
+.modern-table{
+  background: #f3e7da;
+  padding: 35px;
+  border-radius: 25px;
+  margin-bottom: 40px;
 }
 
-.auth-card a{
-  margin-left: 5px;
-  text-decoration: none;
-  color: #2563eb;
-  font-weight: 600;
+.table-header{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
 }
-.auth-page{
-  isolation: isolate;
+
+.receipt-icon{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #ff8c42;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+}
+
+.table-header h1{
+  font-size: 38px;
+  margin-bottom: 5px;
+}
+
+.table-header p{
+  color: #666;
+  font-size: 17px;
+}
+
+.expense-card-row{
+  background: white;
+  padding: 22px 25px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.expense-card-row:hover{
+  transform: translateY(-2px);
+}
+
+.expense-left{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.expense-avatar{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #6bb6f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.expense-left h3{
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.expense-left p{
+  color: #777;
+  font-size: 15px;
+}
+
+.expense-right{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.expense-right h2{
+  font-size: 28px;
+}
+
+.delete-btn{
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  border: none;
+  background: #ffe5e5;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.delete-btn:hover{
+  background: #ef4444;
+  color: white;
+}
+
+.empty-state{
+  text-align: center;
+  padding: 40px 0;
+}
+
+.empty-state h2{
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.empty-state p{
+  color: #666;
+  font-size: 18px;
+}
+
+/* CHARTS */
+
+.charts-wrapper{
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.chart-card{
+  flex: 1;
+  min-width: 320px;
+  background: #f3e7da;
+  border-radius: 30px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.chart-card h2{
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.chart-box{
+  width: 100%;
+  height: 400px;
+}
+
+.empty-chart{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-chart h2{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.empty-chart p{
+  color: #777;
 }

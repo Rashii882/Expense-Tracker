@@ -15,22 +15,29 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
-    expenses: [
-        {
-            text: {
-                type: String,
-                required: true
-            },
-            amount: {
-                type: Number,
-                required: true
-            },
-            createdAt: {
-                type: Date,
-                default: Date.now
-            }
+   expenses: [
+    {
+        text: {
+            type: String,
+            required: true
+        },
+
+        amount: {
+            type: Number,
+            required: true
+        },
+
+        category: {
+            type: String,
+            required: true
+        },
+
+        createdAt: {
+            type: Date,
+            default: Date.now
         }
-    ]
+    }
+]
 });
 
 const UserModel = mongoose.model('users', UserSchema);
